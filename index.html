@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>RJ Events</title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#main-page">Home</a>
+        <a href="#service-page">Services</a>
+        <a href="#gallery-page">Gallery</a>
+        <a href="#about-page">About Us</a>
+        <a href="#contact-page">Contact Us</a>
+    </nav>
+
+    <div class="main-page" id="main-page">
+        <h1 class="main-title" data-aos="fade-up">RJ Events</h1>
+        <div class="short-description" data-aos="fade-up" data-aos-delay="100">
+            <p>RJ Events – Elevating Celebrations in Hyderabad <br><br>
+                Indulge in the art of extraordinary events with RJ Events. With a keen eye for perfection and a passion
+                for elegance, we specialize in crafting sophisticated, seamless experiences that leave a lasting
+                impression. Whether it’s an intimate gathering or an opulent affair, we’re here to make your dream event
+                a reality, right here in Hyderabad.
+            </p>
+        </div>
+        <button id="cta-button" data-aos="zoom-in" data-aos-delay="200">Book Appointment</button>
+    </div>
+
+    <div class="services-page" id="service-page">
+        <h1 class="section-title" data-aos="fade-up">Our Services</h1>
+        <div class="short-description" data-aos="fade-up" data-aos-delay="100">
+            <p>Discover the variety of services we offer, specializing in South Indian-based event management!</p>
+        </div>
+        <div class="service-container">
+
+            <!-- Service Card 1: Wedding Planning -->
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <img class="card-img-top" src="./assets/service_images/wedding_image.jpeg" alt="Wedding Planning">
+                <div class="card-body">
+                    <h5 class="card-title">Wedding Planning</h5>
+                    <p class="card-text">We specialize in planning traditional South Indian weddings, incorporating
+                        rituals, custom decor, and vibrant celebrations.</p>
+                    <!-- Hidden extra content -->
+                    <div class="card-extra" style="display: none;">
+                        <p>We handle everything from venue selection, mandap setup, purohit arrangements to guest
+                            logistics and catering. Each wedding is curated with authentic traditions and modern
+                            touches.</p>
+                    </div>
+                    <button class="card-button" onclick="toggleDetails(this)">See More Details</button>
+
+                </div>
+            </div>
+
+            <!-- Service Card 2: Cultural Events -->
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img class="card-img-top" src="./assets/service_images/cultural-events-image.jpg" alt="Cultural Events">
+                <div class="card-body">
+                    <h5 class="card-title">Cultural Events</h5>
+                    <p class="card-text">From festivals like Pongal to temple events, we manage all cultural activities
+                        with authenticity and grandeur.</p>
+                    <div class="card-extra" style="display: none;">
+                        <p>We bring life to your religious or cultural events with traditional decor, music, dance
+                            performances, pooja setups, and seamless logistics.</p>
+                    </div>
+
+                    <button class="card-button" onclick="toggleDetails(this)">See More Details</button>
+                </div>
+            </div>
+
+            <!-- Service Card 3: Corporate Events -->
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <img class="card-img-top" src="./assets/service_images/corporate-events-image.jpg" alt="Corporate Events">
+                <div class="card-body">
+                    <h5 class="card-title">Corporate Events</h5>
+                    <p class="card-text">We organize corporate events including conferences, seminars, and team-building
+                        activities with a touch of South Indian elegance.</p>
+                    <div class="card-extra" style="display: none;">
+                        <p>Our services include AV setup, branding, cultural entertainment, catering, and RSVP
+                            management for memorable, productive events.</p>
+                    </div>
+
+                    <button class="card-button" onclick="toggleDetails(this)">See More Details</button>
+                </div>
+            </div>
+
+            <!-- Service Card 4: Birthday Parties -->
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img class="card-img-top" src="./assets/service_images/birthday-party-image.jpg" alt="Birthday Parties">
+                <div class="card-body">
+                    <h5 class="card-title">Birthday Parties</h5>
+                    <p class="card-text">Our expert team ensures that birthday celebrations are personalized and fun,
+                        bringing the best South Indian entertainment.</p>
+                    <div class="card-extra" style="display: none;">
+                        <p>We handle theme planning, games, emcees, return gifts, catering, and live
+                            performances—perfect for kids, teens, and adults alike.</p>
+                    </div>
+
+                    <button class="card-button" onclick="toggleDetails(this)">See More Details</button>
+                </div>
+            </div>
+
+            <!-- Service Card 5: Catering -->
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
+                <img class="card-img-top" src="./assets/service_images/catering-images.jpg" alt="Catering Services">
+                <div class="card-body">
+                    <h5 class="card-title">Catering</h5>
+                    <p class="card-text">Delight your guests with exquisite South and North Indian cuisine, curated by
+                        our expert chefs.</p>
+                    <div class="card-extra" style="display: none;">
+                        <p>We offer full-service catering for all event types, with customizable menus featuring
+                            traditional Andhra, Tamil, Kerala, and North Indian dishes. From elegant buffets to live
+                            cooking counters, we ensure authentic taste and top-tier service.</p>
+                    </div>
+                    <button class="card-button" onclick="toggleDetails(this)">See More Details</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="gallery-page" id="gallery-page">
+        <h1 class="section-title" data-aos="fade-up">Gallery</h1>
+        <div class="short-description" data-aos="fade-up" data-aos-delay="100">
+            <p>Explore our beautiful gallery showcasing the incredible events we've curated!</p>
+        </div>
+        <div class="gallery-container">
+            <!-- Placeholder Image 1 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://placehold.co/400x300" alt="Event Image 1">
+            </div>
+
+            <!-- Placeholder Image 2 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://placehold.co/400x300" alt="Event Image 2">
+            </div>
+
+            <!-- Placeholder Image 3 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://placehold.co/400x300" alt="Event Image 3">
+            </div>
+
+            <!-- Placeholder Image 4 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://placehold.co/400x300" alt="Event Image 4">
+            </div>
+
+            <!-- Placeholder Image 5 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                <img src="https://placehold.co/400x300" alt="Event Image 5">
+            </div>
+
+            <!-- Placeholder Image 6 -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                <img src="https://placehold.co/400x300" alt="Event Image 6">
+            </div>
+        </div>
+    </div>
+
+    <div class="about-page" id="about-page">
+        <h1 class="section-title" data-aos="fade-up">About Us</h1>
+
+        <!-- Mission Statement -->
+        <div class="short-description" data-aos="fade-up" data-aos-delay="100">
+            <p>At RJ Events, we believe every celebration deserves to be unforgettable. Our mission is to blend
+                tradition with creativity, crafting events that reflect the soul of South India while embracing modern
+                elegance.</p>
+        </div>
+
+        <!-- Inspirational Quote -->
+        <div class="quote-box" data-aos="fade-up" data-aos-delay="200">
+            <blockquote>
+                “We don’t just plan events. We design memories that linger forever.”
+            </blockquote>
+            <cite>– RJ Events Team</cite>
+        </div>
+
+        <!-- Meet the Team -->
+        <div class="team-section" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="sub-title">Meet the Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150" alt="Founder">
+                    <h4>Radhika Jain</h4>
+                    <p>Founder & Visionary</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150" alt="Creative Head">
+                    <h4>Meghana Rao</h4>
+                    <p>Creative Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150" alt="Ops Manager">
+                    <h4>Ajay Varma</h4>
+                    <p>Operations Head</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Stats -->
+        <div class="stats-section" id="stats-section">
+            <h2 class="section-title">Our Achievements</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <p>Events Organized</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="250">0</span>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <p>Corporate Clients</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span>
+                    <p>Weddings Planned</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="testimonials-carousel-section">
+            <h2 class="sub-title">What Our Clients Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial active">
+                    <p>“RJ Events planned my sister’s wedding flawlessly. Every detail was taken care of with such grace
+                        and culture.”</p>
+                    <cite>- Ananya Rao</cite>
+                </div>
+                <div class="testimonial">
+                    <p>“Our corporate Diwali celebration was a hit! Thank you for bringing the traditional touch with
+                        modern class.”</p>
+                    <cite>- Ramesh Iyer</cite>
+                </div>
+                <div class="testimonial">
+                    <p>“Birthday party felt like a royal fest! The entertainment, the decor, the vibe—everything was on
+                        point.”</p>
+                    <cite>- Kavitha Srinivas</cite>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button id="prevBtn">❮</button>
+                <button id="nextBtn">❯</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-page" id="contact-page">
+        <div class="contact-wrapper">
+            <!-- Left: Form -->
+            <div class="contact-form-area" data-aos="fade-right">
+                <h1 class="section-title">Contact Us</h1>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right: Map & Info -->
+            <div class="contact-map-info" data-aos="fade-left">
+                <div class="map-container">
+                    <!-- Use your actual location in the embed -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.1261087123044!2d78.55250957536515!3d17.309463505044924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba38b9611dc3f%3A0x4cf7d36d6905a0d1!2sRJ%20EVENTS%20%26%20cataring%20management!5e0!3m2!1sen!2sin!4v1745529349261!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-details">
+                    <p><strong>Address:</strong> 6, Tirumala Nagar Rd, Vinayaka Hills, Tirumala Nagar, Sripuram, B.N
+                        Reddy Nagar, Almasguda, Hyderabad, Telangana 500001.</p>
+                    <p><strong>Email:</strong> hello@rjevents.in</p>
+                    <p><strong>Phone:</strong>+91 96407 95086</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="./assets/icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="#"><img src="./assets/icons/instagram-icon.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 RJ Events. All Rights Reserved.</p>
+            <p>Crafting Memories, One Event at a Time.</p>
+            <div class="developer-info">
+                <p>Website developed by <a href="https://eb8dev.web.app" target="_blank">eb8dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- local js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
