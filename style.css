@@ -211,7 +211,8 @@ a:focus,
 }
 
 .quote-cta a {
-    color: #ff8800; /* Adjust to your brand color */
+    color: #ff8800;
+    /* Adjust to your brand color */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -307,7 +308,8 @@ a:focus,
 }
 
 .category-link:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
 }
 
 /* Category Image Container */
@@ -703,6 +705,12 @@ a:focus,
     background-color: #708160;
 }
 
+.form-status {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
 /* Right: map + info */
 .contact-map-info {
     flex: 1;
@@ -712,6 +720,7 @@ a:focus,
     min-width: 320px;
     gap: 1.5rem;
 }
+
 
 .map-container {
     flex: 1;

@@ -8,7 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./assets/icons/favicon.png" type="image/png">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <title>RJ Events</title>
 
 </head>
@@ -143,8 +144,8 @@
         <!-- Final CTA Section -->
         <div class="quote-cta" data-aos="fade-up" data-aos-delay="900">
             <p>Interested in any of our services? <br>
-                For a detailed quote and customization options, <a href="mailto:konreddypooja1234@gmail.com">email us</a> or <a
-                    href="tel:+919640795086">call us</a>.</p>
+                For a detailed quote and customization options, <a href="mailto:konreddypooja1234@gmail.com">email
+                    us</a> or <a href="tel:+919640795086">call us</a>.</p>
         </div>
     </div>
 
@@ -277,6 +278,7 @@
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <p id="form-status" class="form-status"></p>
             </div>
 
             <!-- Right: Map & Info -->
@@ -295,13 +297,14 @@
                     <p><strong>Phone:</strong>+91 96407 95086, +91 79930 94873</p>
                     <div class="social-icons">
                         <a href="#" target="_blank"><img src="./assets/icons/facebook-icon.svg" alt="Facebook"></a>
-                        <a href="https://www.instagram.com/konr.eddypooja?igsh=bDVsM2ZxbWNuYXZj" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/konr.eddypooja?igsh=bDVsM2ZxbWNuYXZj" target="_blank"><img
+                                src="./assets/icons/instagram-icon.svg" alt="Instagram"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="footer-container">
             <p>&copy; 2025 RJ Events. All Rights Reserved.</p>
@@ -318,8 +321,15 @@
     <script>
         AOS.init();
     </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "fDx5Sd5W8VYTw6gYR",
+           });
+        })();
+     </script>
     <!-- local js -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@ if (testimonials.length > 0) {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % testimonials.length;
         showTestimonial(currentIndex);
-    }, 5000);
+    }, 12000);
 }
 
 // Counter Animation for Stats Section
@@ -165,7 +165,7 @@ fetch('gallery.json')
 
             const categoryImageContainer = document.createElement('div');
             categoryImageContainer.className = 'category-image-container';
-            
+
             const img = document.createElement('img');
             const categoryTitle = document.createElement('h2');
             categoryTitle.className = 'category-name';
@@ -174,7 +174,7 @@ fetch('gallery.json')
             img.alt = `${category} First Image`;
             img.className = 'category-image';
             img.loading = 'lazy'; // Lazy load the image
-            
+
             categoryImageContainer.appendChild(img);
             categoryLink.appendChild(categoryImageContainer);
             categoryLink.appendChild(categoryTitle);
@@ -186,3 +186,42 @@ fetch('gallery.json')
     .catch(error => {
         console.error('Error loading gallery categories:', error);
     });
+
+
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
+
+    // Format current time (e.g., 2 May 2025, 4:15 PM)
+    const now = new Date();
+    const formattedTime = now.toLocaleString('en-IN', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    });
+
+    const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+        time: formattedTime
+    };
+    const statusMessage = document.getElementById('form-status');
+
+    emailjs.send('service_8f1p4jd', 'template_pgtn5pi', templateParams)
+        .then(function (response) {
+            statusMessage.textContent = "✅ We've received your request. We'll get back to you soon!";
+            statusMessage.style.color = "green";
+        }, function (error) {
+            statusMessage.textContent = "⚠️ Looks like a middleman is blocking your message. Please try again later.";
+            statusMessage.style.color = "red";
+        });
+
+    this.reset();
+});
