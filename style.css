@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Krona One', sans-serif;
 }
 
 html {
@@ -140,7 +141,7 @@ a:focus,
 
 
 /* Card styling */
-/* .card {
+.card {
     width: 100%;
     max-width: 360px;
     margin: 20px;
@@ -150,23 +151,6 @@ a:focus,
     overflow: hidden;
     background: #fff;
     transition: transform 0.2s;
-} */
-
-.card {
-    flex: 1 1 300px;
-    display: flex;
-    width: 100%;
-    max-width: 360px;
-    margin: 20px;
-    border: none;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -175,7 +159,8 @@ a:focus,
 
 .card-img-top {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-body {
@@ -188,6 +173,7 @@ a:focus,
 }
 
 .card-text {
+    padding: 10px 0;
     color: #555;
 }
 
@@ -207,31 +193,35 @@ a:focus,
     background-color: #708160;
 }
 
-.card-extra {
-    display: none;
-    color: #555;
-    margin-top: 10px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
 .service-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
-    /* justify-content: space-between; */
+    flex-direction: row;
+    justify-content: center;
 }
+
+.quote-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px 15px;
+    background-color: transparent;
+    border-top: 1px solid #eee;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.quote-cta a {
+    color: #ff8800; /* Adjust to your brand color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.quote-cta a:hover {
+    text-decoration: underline;
+    color: wheat;
+}
+
 
 @media (max-width: 768px) {
 
@@ -302,6 +292,111 @@ a:focus,
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Category links style */
+.category-link {
+    display: block;
+    text-align: center;
+    /* background-color: #f8f8f8; */
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.category-link:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Category Image Container */
+.category-image-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Category image styles */
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Category Name Style */
+.category-name {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4F7768;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    margin-bottom: 10px;
+}
+
+/* For the gallery page titles */
+.gallery-page .section-title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #4F7768;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-page .short-description {
+    margin-bottom: 2rem;
+    color: #555;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* For responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .gallery-page .section-title {
+        font-size: 3rem;
+    }
+
+    .gallery-page .short-description {
+        font-size: 1rem;
+    }
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.back-button-inline {
+    background-color: #4F7768;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button-inline:hover {
+    background-color: #3e5f55;
+}
+
+@media (max-width: 600px) {
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
 
 .gallery-item img {
     width: 100%;
@@ -711,4 +806,65 @@ a:focus,
     .footer .developer-info {
         font-size: 10px;
     }
+}
+
+
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.package-card {
+    background-color: #fff;
+    padding: 2rem;
+    border: 2px solid #e2e2e2;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.package-card h3 {
+    margin-bottom: 1rem;
+    color: #c47b00;
+}
+
+.package-card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.package-card .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.cta-section .cta-button {
+    background-color: #c47b00;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.gallery-section .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }

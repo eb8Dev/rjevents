@@ -141,3 +141,48 @@ function toggleDetails(button) {
         button.textContent = "See More Details";
     }
 }
+
+document.getElementById("cta-button").addEventListener("click", function () {
+    document.getElementById("contact-page").scrollIntoView({ behavior: "smooth" });
+});
+
+fetch('gallery.json')
+    .then(response => response.json())
+    .then(data => {
+        const galleryContainer = document.getElementById('galleryContainer');
+        let delay = 100;
+
+        // Loop through each category in the JSON data
+        for (const [category, images] of Object.entries(data)) {
+            const firstImage = images[0]; // Get the first image of the category
+
+            // Create a link for each category with the first image
+            const categoryLink = document.createElement('a');
+            categoryLink.href = `category.html?category=${encodeURIComponent(category)}`; // Link to the category page
+            categoryLink.className = 'category-link';
+            categoryLink.setAttribute('data-aos', 'fade-up');
+            categoryLink.setAttribute('data-aos-delay', delay);
+
+            const categoryImageContainer = document.createElement('div');
+            categoryImageContainer.className = 'category-image-container';
+            
+            const img = document.createElement('img');
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.className = 'category-name';
+            categoryTitle.textContent = category;
+            img.src = firstImage;
+            img.alt = `${category} First Image`;
+            img.className = 'category-image';
+            img.loading = 'lazy'; // Lazy load the image
+            
+            categoryImageContainer.appendChild(img);
+            categoryLink.appendChild(categoryImageContainer);
+            categoryLink.appendChild(categoryTitle);
+            galleryContainer.appendChild(categoryLink);
+
+            delay += 100;
+        }
+    })
+    .catch(error => {
+        console.error('Error loading gallery categories:', error);
+    });
